@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <!-- Container wrapper -->
         <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="/">CS50</a>
             <!-- Toggle button -->
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarRightAlignExample" aria-controls="navbarRightAlignExample" aria-expanded="false" aria-label="Toggle navigation">
 				<i class="fas fa-bars"></i>
@@ -52,6 +52,15 @@
 
     {% block content %} {% endblock %}
 
+
+    <footer class="bg-primary text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3 text-light">
+            © 2022 Copyright:
+            <a class="text-light" href="https://dasunsucharith.github.io/">Dasun Sucharith</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
     <script type="text/javasctipt" src="{{ url_for('static', filename='index.js') }}"></script>
