@@ -31,7 +31,7 @@
                 <!-- Left links -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" id="home" href="/">Home</a>
+                        <a class="nav-link" id="home" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="login" href="/login">Login</a>
@@ -49,6 +49,9 @@
         </div>
         <!-- Container wrapper -->
     </nav>
+
+    {% block content %} {% endblock %}
+
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
     <script type="text/javasctipt" src="{{ url_for('static', filename='index.js') }}"></script>
