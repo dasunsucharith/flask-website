@@ -1,5 +1,8 @@
 from flask import Blueprint, render_template, request, flash
 from .models import User
+from werkzeug.security import generate_password_hash, check_password_hash
+
+
 
 auth = Blueprint('auth', __name__)
 
