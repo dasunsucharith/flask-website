@@ -1,22 +1,18 @@
 {% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block content %}
 <h3>Sign Up</h3>
-<form action="/sign-up" method="post">
+<form method="post">
     <div class="mb-3">
-        <label for="exampleInputName1" class="form-label">Username</label>
-        <input type="text" class="form-control mx-auto w-auto id=" exampleInputName1 " name="name ">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="name" placeholder="Username" type="text">
     </div>
-    <div class="mb-3 ">
-        <label for="exampleInputEmail1 " class="form-label ">Email address</label>
-        <input type="email " class="form-control mx-auto w-auto " id="exampleInputEmail1 " name="email ">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="email" name="email" placeholder="Email" type="email">
     </div>
-    <div class="mb-3 ">
-        <label for="exampleInputPassword1 " class="form-label ">Password</label>
-        <input type="password " class="form-control mx-auto w-auto " id="exampleInputPassword1 " name="password ">
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
     </div>
-    <div class="mb-3 ">
-        <label for="exampleInputPassword2 " class="form-label ">Confirm Password</label>
-        <input type="password " class="form-control mx-auto w-auto " id="exampleInputPassword2 " name="password_confirm ">
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="password_confirm" name="password_confirm" placeholder="Confirm Password" type="password">
     </div>
-    <button type="submit " class="btn btn-primary ">Register</button>
+    <button class="btn btn-primary" type="submit">Register</button>
 </form>
 {% endblock%}
