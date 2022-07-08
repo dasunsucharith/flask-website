@@ -1,6 +1,28 @@
-{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %}
+{% extends "base.html" %} 
 
-<form method="post">
+{% block title %}
+    Home
+{% endblock %} 
 
-</form>
+{% block content %}
+
+<h3 class="text-center">Posts</h3>
+
+<div class="container">
+    <ul class="list-group list-group-flush" id="posts">
+        {% for post in user.posts  %}
+            <li class="list-group-item"> {{ post.data }} </li>
+        {% endfor %}
+    </ul>
+
+    <br />
+
+    <form method="POST">
+        <div class="mb-3">
+            <textarea class="form-control" rows="3" id="post" name="post" placeholder="Enter Your Post Here" type="text" ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Post</button>
+    </form>
+</div>
+
 {% endblock %}
