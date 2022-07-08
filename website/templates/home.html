@@ -9,20 +9,12 @@
 <h3 class="text-center">Posts</h3>
 
 <div class="container">
-    <ul class="list-group list-group-flush" id="posts">
-        {% for post in user.posts  %}
-            <li class="list-group-item"> 
-
-                {{ post.data }} 
-
-                <button type="button" class="btn btn-danger" onClick="deletePost({{ post.id }})">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-
-            </li>
+        {% for post in user.posts  %}             
+                <div class="alert alert-info" role="alert">
+                    {{ post.data }}
+                    <button type="button" class="btn btn-danger" onClick="deletePost({{ post.id }})"><span aria-hidden="true">&times;</span></button>
+                </div>
         {% endfor %}
-    </ul>
-
     <br />
 
     <form method="POST">
