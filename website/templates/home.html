@@ -10,9 +10,15 @@
 
 <div class="container">
         {% for post in user.posts  %}             
-                <div class="alert alert-info" role="alert">
-                    {{ post.data }}
-                    <button type="button" class="btn btn-danger" onClick="deletePost({{ post.id }})"><span aria-hidden="true">&times;</span></button>
+                <div class="d-flex justify-content-between alert alert-info" role="alert">
+                    <span class="align-middle">
+                        {{ post.data }}
+                    </span>
+                    <div>
+                        <button type="button" class="btn btn-danger" onClick="deletePost({{ post.id }})">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>           
                 </div>
         {% endfor %}
     <br />
