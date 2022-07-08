@@ -1,5 +1,5 @@
 from unicodedata import category
-from flask import Blueprint, render_template, request, flash
+from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
 from .models import Post
 from . import db 
@@ -24,4 +24,16 @@ def home():
             flash('Post Added!', category='success')
 
     return render_template("home.html", user=current_user)
+
+@views.route('/delete-post', methods=['POST'])
+def delete_post():
+    post = json.loads(request.data)
+    postID = post['postID']
+    post = Post.query.get(postID)
+    if post:
+        if post.user_id == current_user.id:
+            db.session.delete(post)
+            db.session.commit()
+
+    return jsonify({})
 
