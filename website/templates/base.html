@@ -48,7 +48,7 @@
         </div>
         <!-- Container wrapper -->
     </nav>
-    <div class="container-fluid">
+    <div>
         {% with messages=get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %} {% if category=='error' %}
         <div class="alert alert-danger alert-dismissible d-flex align-items-center fade show" role="alert">
             {{ message }}
